@@ -45,4 +45,8 @@ body {
   font-weight: bold; 
 }
 
+#info {
+  position: fixed;
+}
+
 

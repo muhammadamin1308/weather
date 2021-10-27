@@ -39,11 +39,30 @@
         <div id="info"></div>
     </main>
 
+
+
+
+    
+    <script> 
+      async function display_weather() {
+        let place = document.getElementById('location').value;
+
+        let res = await eel.get_weather(place)();
+        document.getElementById('info').innerHTML - res;
+      }
+
+      jQuery('#show').on('click', function() {
+        display_weather();
+      });
+    </script>    
+    
+    
+    
+    
+    
     <!-- jQuery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"
     ></script>
     <!-- Materialize JS CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -51,19 +70,6 @@
       $("document").ready(function () {
         $(".button-collapse").sideNav();
       });
-    </script>
-    
-    <script> 
-      async function display_weather() {
-        let place = document.getElementById('location').value
-
-        let res = await eel.get_weather(place)();
-        document.getElementById('info').innerHTML - res
-      }
-
-      jQuery('#show').on('click', function() {
-        display_weather();
-      })
     </script>
   </body>
 </html>
